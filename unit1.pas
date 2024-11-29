@@ -225,12 +225,10 @@ begin
                                                Begin
                                                   ResultSearch := PathDefault + '\' + R.Name;
                                                   ResultSearch := StringReplace(PathDefault + '\' + R.Name, PrincipalPath, '..', [rfReplaceAll]);
-                                                  ResultSearch := UnitOrigin[i].Trim + ' in ' + ResultSearch + '\' + S.Name + ',';
+                                                  ResultSearch := UnitOrigin[i].Trim + ' in ''' + ResultSearch + '\' + S.Name + ''',';
                                                   ResultSearch := StringReplace(ResultSearch , '\\',  '\' ,[rfReplaceAll, rfIgnoreCase]);
                                                   if trim(ResultSearch) <> '' then
                                                      Units.Add(trim(ResultSearch));
-                                                  if Pos('PluginManager',UnitList) > 0 then
-                                                     k := 0;
                                                   ListUnitsInFile(PathDefault + '\' + R.Name + '\' + S.Name, PrincipalPath);
                                                end;
                                             x := FindNext(S);
