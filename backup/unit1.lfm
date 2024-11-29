@@ -1,0 +1,70 @@
+object Form1: TForm1
+  Left = 350
+  Height = 459
+  Top = 250
+  Width = 786
+  Caption = 'Form1'
+  ClientHeight = 459
+  ClientWidth = 786
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '3.4.0.0'
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 16
+    Width = 68
+    Caption = 'Pasta Padrão'
+  end
+  object edtPastaPadrao: TEdit
+    Left = 16
+    Height = 23
+    Top = 32
+    Width = 240
+    TabOrder = 0
+    Text = 'edtPastaPadrao'
+  end
+  object Label2: TLabel
+    Left = 264
+    Height = 15
+    Top = 16
+    Width = 42
+    Caption = 'Arquivo'
+  end
+  object edtArquivoBase: TEdit
+    Left = 264
+    Height = 23
+    Top = 32
+    Width = 240
+    TabOrder = 1
+    Text = 'edtArquivoBase'
+  end
+  object memResultado: TMemo
+    Left = 16
+    Height = 312
+    Top = 64
+    Width = 734
+    Lines.Strings = (
+      'memResultado'
+    )
+    ScrollBars = ssBoth
+    TabOrder = 2
+  end
+  object btnPesquisar: TButton
+    Left = 272
+    Height = 40
+    Top = 384
+    Width = 144
+    Caption = 'Listar Dependências'
+    TabOrder = 3
+    OnClick = btnPesquisarClick
+  end
+  object stbPosicionamento: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 436
+    Width = 786
+    Panels = <>
+    SimpleText = 'teste'
+  end
+end
